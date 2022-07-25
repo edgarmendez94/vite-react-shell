@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import About from "../pages/About";
 import Pricing from "../pages/pricing";
-
+import ModalLogin from "./modal";
 
 export default function UnauthenticatedApp({login}){
     return(
@@ -11,6 +11,7 @@ export default function UnauthenticatedApp({login}){
             <h1>Welcome</h1>
             <p>Please login</p>
             <button onClick={login}>Login</button>
+            <ModalLogin/>
             <main>
                 <h2>Learn more about the app</h2>
                 <Router>

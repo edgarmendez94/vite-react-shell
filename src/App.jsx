@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import UnauthenticatedApp from './components/UnauthenticatedApp'
 import AuthenticatedApp from './components/AuthenticatedApp'
+import ModalLogin from './components/modal'
 
 function App() {
   const [logginIn, setLoggedIn] = useState(false)
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className='app-container' >
       {!logginIn ? (
-        <UnauthenticatedApp login={login}/>
+        <ModalLogin login={login}/> 
       ): (
         <AuthenticatedApp logout={logout}/>
       )}
